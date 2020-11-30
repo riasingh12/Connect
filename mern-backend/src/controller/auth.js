@@ -46,7 +46,7 @@ exports.signin =(req,res) =>{
     .exec ((err, user)=>{
         if(err) return res.status(400).json({err});
         if(user){//if user exists, authenticate by matching with password
-            if(user.authenticate(req.body.password))
+            if(user.authenticate(req.body.password) && user.role == 'user')
             {
                 //if authentication success, create token to manage user session
                 //when user logs in, sends request which we can verify from backend
