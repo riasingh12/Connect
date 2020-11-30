@@ -29,10 +29,16 @@ npm --install bcrypt
 for password hashing and token creation via SHA256
 
 Extra Notes:
-express is an unopinionated framework, we can write our code in own style
+1. express is an unopinionated framework, we can write our code in own style
 route will create route path
 models=database
 controllers=logic
+2. add the following in a .env file
+PORT=2000
+MONGO_DB_USER=admin
+MONGO_DB_PASSWORD=admin
+MONGO_DB_DATABASE=events
+JWT_SECRET=MERNSECRET
 
 For Frontend,
 
